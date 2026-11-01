@@ -71,6 +71,7 @@ nav.otra { margin-top:3rem; padding-top:1rem; border-top:1px solid var(--linea);
 <tr><td><strong>Texto que escribes a mano sobre una condición</strong>, como "alergia a la fresa", solo si lo autorizas</td><td>Convertirlo en lo que conviene mirar en la etiqueta</td><td>Pasa por nuestro servidor hacia Anthropic</td><td>Nuestro servidor no lo guarda ni lo registra: solo cuenta que hubo una llamada. En tu teléfono queda hasta que lo quites. En Anthropic, ver la sección 6</td></tr>
 <tr><td><strong>Aviso de "algo está mal en este producto"</strong></td><td>Poner el producto en revisión</td><td>Base de datos de Ojito</td><td>Queda el motivo en el producto. No se guarda quién avisó</td></tr>
 <tr><td><strong>Datos técnicos de la conexión</strong>, como la dirección IP</td><td>Son lo normal en cualquier conexión a internet</td><td>Supabase y sus registros técnicos</td><td>Según el plan del proveedor, que define cuánto duran esos registros</td></tr>
+<tr><td><strong>Tu dirección IP y el código de barras de un producto sugerido</strong>, que va en la dirección de su foto</td><td>Mostrar cómo se ve el producto cuando la app sugiere otra opción</td><td>Directo desde tu teléfono a Open Food Facts u Open Beauty Facts, que guardan esas fotos. No son proveedores de Ojito. No les enviamos nada de tu familia</td><td>Según esos servicios</td></tr>
 <tr><td><strong>Métricas técnicas de ML Kit:</strong> modelo y sistema del teléfono, rendimiento, errores e identificador por instalación</td><td>Funcionamiento de los lectores de códigos y de texto</td><td>Google, según su <a href="https://developers.google.com/ml-kit/android-data-disclosure">divulgación de datos de ML Kit</a>. Las imágenes no aparecen en esa lista</td><td>Según Google</td></tr>
 </tbody>
 </table>
@@ -89,7 +90,8 @@ nav.otra { margin-top:3rem; padding-top:1rem; border-top:1px solid var(--linea);
 <li><strong>Supabase</strong> aloja la base de datos, las fotos y las funciones del servidor, en Estados Unidos.</li>
 <li><strong>Anthropic, PBC</strong> presta el servicio de inteligencia artificial que lee las fotos y el texto, desde fuera de Colombia. Según sus <a href="https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data">condiciones publicadas</a>, consultadas el 1 de noviembre de 2026, borra esas entradas y salidas dentro de 30 días, salvo excepciones como hacer cumplir su política de uso o cumplir la ley. También <a href="https://privacy.claude.com/en/articles/7996885-how-do-you-use-personal-data-in-model-training">dice</a> que no entrena sus modelos con estos datos, salvo que el cliente participe voluntariamente.</li>
 <li><strong>Google</strong> recibe las métricas técnicas de ML Kit que se describen arriba.</li>
-<li><strong>Las personas que revisan productos para Ojito</strong> pueden ver las fotos.</li>
+<li><strong>Open Food Facts y Open Beauty Facts</strong> reciben tu dirección IP y el código del producto cuando tu teléfono carga la foto de una opción sugerida. No son proveedores de Ojito: actúan por su cuenta, con sus propias condiciones, y pueden estar fuera de Colombia.</li>
+<li><strong>Las personas que revisan productos para Ojito</strong> pueden ver las fotos que envías.</li>
 <li><strong>Las autoridades</strong>, cuando la ley lo exija.</li>
 </ul>
 <p>Supabase y Anthropic tratan los datos por cuenta de Ojito, bajo sus acuerdos de tratamiento de datos, y deben darles una protección igual o equivalente a la de esta política. Tu información sale de Colombia hacia países como Estados Unidos, que la Superintendencia de Industria y Comercio incluye entre los que tienen un nivel adecuado de protección.</p>
@@ -99,7 +101,7 @@ nav.otra { margin-top:3rem; padding-top:1rem; border-top:1px solid var(--linea);
 <p>Usamos los datos solo para lo que dice esta política y durante el tiempo que indica la sección 4. La base de datos de Ojito seguirá vigente mientras el servicio funcione. Cuando deje de funcionar, o cuando un dato ya no haga falta y la ley no pida conservarlo, se suprime.</p>
 
 <h2 id="seguridad">8. Seguridad</h2>
-<p>La conexión con nuestros servidores va cifrada (HTTPS). Las fotos están en almacenamiento privado. Solo el servidor puede cambiar los puntajes de los productos. Ningún sistema es completamente seguro.</p>
+<p>La conexión con nuestros servidores y la carga de las fotos de opciones sugeridas van cifradas (HTTPS). Las fotos están en almacenamiento privado. Solo el servidor puede cambiar los puntajes de los productos. Ningún sistema es completamente seguro.</p>
 
 <h2 id="derechos">9. Tus derechos</h2>
 <p>Como titular de los datos, según la Ley 1581 de 2012, puedes:</p>
@@ -126,7 +128,7 @@ nav.otra { margin-top:3rem; padding-top:1rem; border-top:1px solid var(--linea);
 <p>Ojito es para personas adultas que revisan productos, también para sus hijos. La edad de un menor se queda en el teléfono. Sus derechos los ejerce quien lo representa.</p>
 
 <h2 id="productos">12. Datos de productos</h2>
-<p>Los datos de productos vienen en parte de <a href="https://world.openfoodfacts.org">Open Food Facts</a> y, en las versiones de prueba, de <a href="https://world.openbeautyfacts.org">Open Beauty Facts</a>, disponibles bajo la <a href="https://opendatacommons.org/licenses/odbl/1-0/">Open Database License (ODbL)</a>.</p>
+<p>Los datos de productos vienen en parte de <a href="https://world.openfoodfacts.org">Open Food Facts</a> y, en las versiones de prueba, de <a href="https://world.openbeautyfacts.org">Open Beauty Facts</a>, disponibles bajo la <a href="https://opendatacommons.org/licenses/odbl/1-0/">Open Database License (ODbL)</a>. Las fotos de productos vienen de esas mismas bases, con licencia <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.es">CC BY-SA</a>.</p>
 
 <h2 id="salud">13. Información de salud</h2>
 <p>Ojito da información general sobre productos empacados. No es un dispositivo médico y no diagnostica, trata, cura ni previene ninguna enfermedad. No reemplaza a tu médico, a tu pediatra ni a una nutricionista. Más detalle en los <a href="terminos.html">términos y condiciones</a>.</p>
