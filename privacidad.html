@@ -27,7 +27,7 @@ nav.otra { margin-top:3rem; padding-top:1rem; border-top:1px solid var(--linea);
 <body>
 <main>
 <h1>Política de privacidad de Ojito</h1>
-<p class="version">Versión 1.0. Vigente desde el 1 de noviembre de 2026.</p>
+<p class="version">Versión 1.1. Vigente desde el 8 de noviembre de 2026.</p>
 <p>Ojito es una app que revisa productos empacados a partir de su código de barras. Esta política explica qué información usa la app, a dónde va, cuánto tiempo se conserva y cómo ejercer tus derechos. Es también la política de tratamiento de datos personales que pide la ley colombiana.</p>
 
 <h2 id="responsable">1. Quién responde por tus datos</h2>
@@ -45,7 +45,7 @@ nav.otra { margin-top:3rem; padding-top:1rem; border-top:1px solid var(--linea);
 <ul>
 <li>No hay cuenta ni registro. Ojito no pide tu nombre, tu correo ni tu teléfono.</li>
 <li>Las edades, las fechas de nacimiento y los perfiles de tu familia se quedan en tu teléfono.</li>
-<li>Sale del teléfono lo que la app necesita para funcionar: el código del producto, un identificador de la instalación, las fotos de empaques que decidas enviar y, solo si lo autorizas, lo que escribas a mano sobre una condición.</li>
+<li>Sale del teléfono lo que la app necesita para funcionar: el código del producto, un identificador de la instalación, las fotos de empaques y las notas que decidas enviar y, solo si lo autorizas, lo que escribas a mano sobre una condición.</li>
 <li>Ojito no muestra publicidad y no vende tu información.</li>
 </ul>
 
@@ -64,19 +64,21 @@ nav.otra { margin-top:3rem; padding-top:1rem; border-top:1px solid var(--linea);
 <table>
 <thead><tr><th scope="col">Qué</th><th scope="col">Para qué</th><th scope="col">A dónde va</th><th scope="col">Cuánto se conserva</th></tr></thead>
 <tbody>
-<tr><td><strong>Identificador de la instalación:</strong> un número que identifica la app instalada en tu teléfono, sin tu nombre ni una cuenta</td><td>Reconocer la instalación para administrar el servicio y preparar planes futuros. Hoy no se cobra nada</td><td>Base de datos de Ojito, en Supabase</td><td>Mientras se use el servicio, o hasta que pidas borrarlo</td></tr>
+<tr><td><strong>Identificador de la instalación:</strong> un número que identifica la app instalada en tu teléfono, sin tu nombre ni una cuenta</td><td>Reconocer la instalación para administrar el servicio y preparar planes futuros. Hoy no se cobra nada. Dejar de recibir fotos de un teléfono que manda fotos de otro producto</td><td>Base de datos de Ojito, en Supabase</td><td>Mientras se use el servicio, o hasta que pidas borrarlo</td></tr>
+<tr><td><strong>El identificador, con cada envío de fotos de un producto</strong></td><td>Si la inteligencia artificial rechaza 3 envíos de un teléfono en 7 días porque no eran del producto, no eran un empaque o tenían contenido inapropiado, ese teléfono no puede mandar fotos por 30 días. Una foto borrosa o incompleta no cuenta. Quienes revisan productos pueden levantar el bloqueo</td><td>Función de Ojito en Supabase. Guarda solo una huella del identificador, el motivo y la fecha de cada rechazo, sin el producto, las fotos ni nada de tu familia</td><td>Los rechazos, 7 días; un bloqueo, hasta 7 días después de terminar</td></tr>
 <tr><td><strong>Código de barras</strong> que escaneas o escribes</td><td>Buscar el producto</td><td>Supabase</td><td>La consulta no se guarda como un historial tuyo. Puede quedar en los registros técnicos. Si el producto no existe y envías fotos, el código queda guardado con el producto</td></tr>
 <tr><td><strong>Fotos de empaques</strong> que decides enviar</td><td>Leer la etiqueta de un producto y revisarlo</td><td>Supabase y Anthropic, que lee las fotos con inteligencia artificial</td><td>En Supabase, en almacenamiento privado. Hoy no hay un plazo de borrado automático: se conservan mientras hagan falta para revisar el producto, o hasta que pidas borrarlas. En Anthropic, ver la sección 6</td></tr>
 <tr><td><strong>Lo que resulta de leer esas fotos:</strong> nombre, ingredientes y tabla nutricional</td><td>Mostrar el producto a todas las personas que usan Ojito</td><td>Base de datos de Ojito</td><td>Mientras el producto siga en la base. Es información del producto y no dice quién la envió</td></tr>
 <tr><td><strong>Texto que escribes a mano sobre una condición</strong>, como "alergia a la fresa", solo si lo autorizas</td><td>Convertirlo en lo que conviene mirar en la etiqueta</td><td>Pasa por nuestro servidor hacia Anthropic</td><td>Nuestro servidor no lo guarda ni lo registra: solo cuenta que hubo una llamada. En tu teléfono queda hasta que lo quites. En Anthropic, ver la sección 6</td></tr>
-<tr><td><strong>Aviso de "algo está mal en este producto"</strong></td><td>Poner el producto en revisión</td><td>Base de datos de Ojito</td><td>Queda el motivo en el producto. No se guarda quién avisó</td></tr>
+<tr><td><strong>"¿Algo está mal?":</strong> lo que dices que está mal, una nota de hasta 280 caracteres y hasta 3 fotos, si decides mandarlas</td><td>Que el equipo de Ojito revise el producto y decida si lo corrige. Mientras tanto, el producto queda en revisión</td><td>Función de Ojito en Supabase, en privado. Si dices que son los ingredientes o el cuadrito con números, la primera foto va a Anthropic para leerla. Un correo con el producto, lo que está mal, la nota y enlaces a las fotos va a cada una de las personas del equipo de Ojito que deciden las correcciones, por Brevo (ver la sección 6). No lleva tu identificador ni nada de tu familia; el identificador solo se usa, como en las demás fotos, para ver si ese teléfono tiene bloqueadas las fotos</td><td>Si el equipo dice No, las fotos se borran. Si dice Sí, se conservan como las demás fotos del producto. La nota se conserva con el reporte, sin plazo automático. No se guarda quién avisó. El correo queda en los buzones del equipo; los enlaces a las fotos vencen a los 7 días</td></tr>
+<tr><td><strong>Una nota opcional con las fotos de un producto que no tenemos</strong>, de hasta 280 caracteres</td><td>Contarle algo al equipo, que recibe esas fotos por correo para aprobarlas o rechazarlas</td><td>Igual que la fila anterior. La nota no va a Anthropic</td><td>Igual que la fila anterior. Si el equipo dice No, se borran las fotos de ese envío y, si el producto lo creó tu envío, deja de verse</td></tr>
 <tr><td><strong>Datos técnicos de la conexión</strong>, como la dirección IP</td><td>Son lo normal en cualquier conexión a internet</td><td>Supabase y sus registros técnicos</td><td>Según el plan del proveedor, que define cuánto duran esos registros</td></tr>
 <tr><td><strong>Tu dirección IP y el código de barras de un producto sugerido</strong>, que va en la dirección de su foto</td><td>Mostrar cómo se ve el producto cuando la app sugiere otra opción</td><td>Directo desde tu teléfono a Open Food Facts u Open Beauty Facts, que guardan esas fotos. No son proveedores de Ojito. No les enviamos nada de tu familia</td><td>Según esos servicios</td></tr>
 <tr><td><strong>Métricas técnicas de ML Kit:</strong> modelo y sistema del teléfono, rendimiento, errores e identificador por instalación</td><td>Funcionamiento de los lectores de códigos y de texto</td><td>Google, según su <a href="https://developers.google.com/ml-kit/android-data-disclosure">divulgación de datos de ML Kit</a>. Las imágenes no aparecen en esa lista</td><td>Según Google</td></tr>
 </tbody>
 </table>
 </div>
-<p>No envíes fotos de personas: la app pide solo el empaque. Antes de guardar una foto, nuestro servidor le quita los metadatos, incluida la ubicación.</p>
+<p>No envíes fotos de personas: la app pide solo el empaque. No escribas en una nota nombres ni datos de tu familia ni de nadie: la app lo pide así. Antes de guardar una foto, nuestro servidor le quita los metadatos, incluida la ubicación.</p>
 <p>Las versiones de prueba de la app también revisan productos de cuidado personal. Sus fotos y sus datos reciben el mismo trato.</p>
 
 <h2 id="sensibles">5. Datos de salud, datos de menores y tu autorización</h2>
@@ -89,12 +91,13 @@ nav.otra { margin-top:3rem; padding-top:1rem; border-top:1px solid var(--linea);
 <ul>
 <li><strong>Supabase</strong> aloja la base de datos, las fotos y las funciones del servidor, en Estados Unidos.</li>
 <li><strong>Anthropic, PBC</strong> presta el servicio de inteligencia artificial que lee las fotos y el texto, desde fuera de Colombia. Según sus <a href="https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data">condiciones publicadas</a>, consultadas el 1 de noviembre de 2026, borra esas entradas y salidas dentro de 30 días, salvo excepciones como hacer cumplir su política de uso o cumplir la ley. También <a href="https://privacy.claude.com/en/articles/7996885-how-do-you-use-personal-data-in-model-training">dice</a> que no entrena sus modelos con estos datos, salvo que el cliente participe voluntariamente.</li>
+<li><strong>Brevo (Sendinblue SAS, Francia)</strong> lleva los correos al equipo de Ojito. Cuando nos avisas que algo está mal o nos mandas fotos de un producto, el equipo recibe un correo con el producto, lo que está mal si nos lo dices, tu nota y enlaces a tus fotos que vencen a los 7 días. Las fotos no van dentro del correo. Ese correo no lleva tu identificador ni nada de tu familia, y queda en los buzones de correo del equipo.</li>
 <li><strong>Google</strong> recibe las métricas técnicas de ML Kit que se describen arriba.</li>
 <li><strong>Open Food Facts y Open Beauty Facts</strong> reciben tu dirección IP y el código del producto cuando tu teléfono carga la foto de una opción sugerida. No son proveedores de Ojito: actúan por su cuenta, con sus propias condiciones, y pueden estar fuera de Colombia.</li>
 <li><strong>Las personas que revisan productos para Ojito</strong> pueden ver las fotos que envías.</li>
 <li><strong>Las autoridades</strong>, cuando la ley lo exija.</li>
 </ul>
-<p>Supabase y Anthropic tratan los datos por cuenta de Ojito, bajo sus acuerdos de tratamiento de datos, y deben darles una protección igual o equivalente a la de esta política. Tu información sale de Colombia hacia países como Estados Unidos, que la Superintendencia de Industria y Comercio incluye entre los que tienen un nivel adecuado de protección.</p>
+<p>Supabase, Anthropic y Brevo tratan los datos por cuenta de Ojito, como encargados, bajo sus acuerdos de tratamiento de datos, y deben darles una protección igual o equivalente a la de esta política. Tu información sale de Colombia hacia países como Estados Unidos y Francia, que la Superintendencia de Industria y Comercio incluye entre los que tienen un nivel adecuado de protección.</p>
 <p>Cuando usas "Compartir", tú eliges a quién enviar la tarjeta del resultado. Esa tarjeta no lleva edades ni datos de tu familia.</p>
 
 <h2 id="vigencia">7. Hasta cuándo</h2>
@@ -120,7 +123,7 @@ nav.otra { margin-top:3rem; padding-top:1rem; border-top:1px solid var(--linea);
 <ul>
 <li><strong>En tu teléfono:</strong> quita el perfil en "Mi familia" o desinstala la app.</li>
 <li><strong>Autorización del texto:</strong> retírala en Ajustes.</li>
-<li><strong>En nuestros servidores:</strong> escribe al correo de la <a href="#responsable">sección 1</a> pidiendo borrar tus fotos o el identificador de tu instalación, con el código de barras del producto si lo tienes.</li>
+<li><strong>En nuestros servidores:</strong> escribe al correo de la <a href="#responsable">sección 1</a> pidiendo borrar tus fotos, tus notas o el identificador de tu instalación, con el código de barras del producto si lo tienes.</li>
 </ul>
 <p>Los datos del producto que ya se muestran a todas las personas, como su nombre o sus ingredientes, no dicen quién los envió y pueden seguir en la base. Lo que tienen los proveedores se borra según lo dicho en la sección 6.</p>
 
